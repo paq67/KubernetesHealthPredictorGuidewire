@@ -49,7 +49,9 @@ The application provides an end-to-end pipeline for Kubernetes cluster health mo
 3. **Model Evaluation** - Evaluate model performance with detailed metrics
 4. **Prediction** - Run predictions on new data to identify potential failures
 
-![Image here]
+## Video Demo
+
+https://github.com/user-attachments/assets/19a4fa7e-c59b-4c66-b15d-f5a9e7ac144c
 
 ## Features
 
@@ -78,12 +80,12 @@ The Random Forest model is used for classification-based prediction of Kubernete
 2. Using majority voting to make final predictions
 3. Providing feature importance to identify critical metrics affecting cluster health
 
-![Image here]
-
 **Key Parameters:**
 - Number of estimators (trees): 50-300 (configurable)
 - Maximum depth: 5-30 (configurable)
 - Class weights: Automatically adjusted for imbalanced datasets
+
+<img src="https://github.com/user-attachments/assets/74dc6403-df66-460f-8368-11bc8a26d12f" width="500">
 
 ### Isolation Forest
 
@@ -97,6 +99,8 @@ The Isolation Forest model is used for anomaly detection in Kubernetes metrics. 
 - Contamination: Automatically calculated based on expected failure rate
 - Number of estimators: 50-300 (configurable)
 
+<img src="https://github.com/user-attachments/assets/f1e82da6-cf64-4025-b1d9-801908fbce9f" width="500">
+
 ### ARIMA Time Series Model
 
 The ARIMA (AutoRegressive Integrated Moving Average) model is used for forecasting future metrics values and detecting trends. It:
@@ -105,7 +109,7 @@ The ARIMA (AutoRegressive Integrated Moving Average) model is used for forecasti
 2. Forecasts future values based on historical patterns
 3. Helps identify potential deviations that could indicate upcoming failures
 
-![Image here]
+<img src="https://github.com/user-attachments/assets/6b2086c8-4ce1-4655-9383-3a3d6f6eef06" width="700">
 
 ## Performance Metrics
 
@@ -118,12 +122,14 @@ The application provides comprehensive performance metrics for each model:
 - F1 Score: Harmonic mean of precision and recall
 - AUC-ROC: Area under the Receiver Operating Characteristic curve
 
-![Image here]
+<img src="https://github.com/user-attachments/assets/341e8b9a-c69d-4b62-9d40-a4ffe849565a" width="800">
 
 ### Anomaly Detection Metrics (Isolation Forest)
 - Anomaly Score Distribution
 - Precision and Recall at various thresholds
 - F1 Score optimization for threshold selection
+
+<img src="https://github.com/user-attachments/assets/67d225ed-a23e-41b6-a10c-bdba976b666c" width="800">
 
 ### Time Series Metrics (ARIMA)
 - RMSE (Root Mean Square Error)
@@ -132,7 +138,7 @@ The application provides comprehensive performance metrics for each model:
 - R² (Coefficient of Determination)
 - Direction Accuracy
 
-![Image here]
+<img src="https://github.com/user-attachments/assets/b8811bae-6163-46e7-8ea8-252dfe03dfbb" width="800">
 
 ## Data Processing Pipeline
 
@@ -285,7 +291,6 @@ These input parameters are processed through feature engineering steps that crea
 - Statistical features (variance, skewness, etc.)
 - Anomaly scores
 
-![Image here]
 
 ## Extending the Application
 
