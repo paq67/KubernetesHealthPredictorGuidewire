@@ -42,4 +42,4 @@ streamlit run app.py
 
 ## Documentation
 
-For detailed documentation, please refer to the [docs/README.md](docs/README.md) file.
+For detailed documentation, please refer   to the [docs/README.md](docs/README.md) file.
