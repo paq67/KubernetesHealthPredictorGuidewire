@@ -26,7 +26,7 @@ A machine learning application for predictive Kubernetes cluster health monitori
 - Scikit-learn for machine learning models
 - Pandas and NumPy for data processing
 - Plotly and Matplotlib for visualization
-- Statsmodels for time series analysis
+- Statsmodels for time   series analysis
 
 ## Quick Start
 
