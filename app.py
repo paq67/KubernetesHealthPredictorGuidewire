@@ -318,7 +318,7 @@ elif page == "Model Evaluation":
                             display_metrics, 
                             model_name=model_to_evaluate.replace('_', ' ').title()
                         )
-                        st.plotly_chart(perf_fig)
+                        st.plotly_chart(perf_fig, key=f"perf_matrix_{model_to_evaluate}")
 
                     # Create a more user-friendly metrics display with color-coded performance indicators
                     st.write("### Detailed Performance Metrics")
@@ -520,7 +520,7 @@ elif page == "Model Evaluation":
                             # Display performance matrix
                             st.subheader("Time Series Model Performance Matrix")
                             perf_fig = create_time_series_performance_matrix(ts_metrics, model_name=f"{feature} ARIMA Model")
-                            st.plotly_chart(perf_fig)
+                            st.plotly_chart(perf_fig, key="time_series_perf_matrix")
 
         # Compare models if multiple models are trained
         if len(st.session_state.evaluation_results) > 1:
