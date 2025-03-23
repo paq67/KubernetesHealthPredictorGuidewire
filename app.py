@@ -124,7 +124,7 @@ if page == "Data Preparation":
         if 'failure' in st.session_state.data.columns:
             fig = px.histogram(st.session_state.data, x='failure', color='failure',
                             title='Distribution of Failure vs Non-Failure Cases')
-            st.plotly_chart(fig)
+            st.plotly_chart(fig, key="failure_distribution_histogram")
 
         st.subheader("Data Preprocessing")
         if st.button("Preprocess Data"):
@@ -476,7 +476,7 @@ elif page == "Model Evaluation":
                             height=500,
                             width=700
                         )
-                        st.plotly_chart(fig)
+                        st.plotly_chart(fig, key="roc_curve_plot")
 
                     # For Isolation Forest, visualize anomaly detection
                     if model_to_evaluate == 'isolation_forest':
@@ -485,7 +485,7 @@ elif page == "Model Evaluation":
                             st.session_state.X_test, 
                             evaluation_results['predictions']
                         )
-                        st.plotly_chart(fig)
+                        st.plotly_chart(fig, key="anomaly_detection_plot")
 
                 else:  # Time Series model visualization
                     st.subheader("Time Series Forecast")
@@ -554,7 +554,7 @@ elif page == "Model Evaluation":
                             metrics, 
                             model_name=model_name.replace('_', ' ').title()
                         )
-                        st.plotly_chart(perf_fig)
+                        st.plotly_chart(perf_fig, key=f"perf_matrix_comparison_{model_name}")
                 
                 # Display traditional metrics table
                 st.subheader("Metric Comparison Table")
