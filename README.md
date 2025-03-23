@@ -4,7 +4,7 @@ A machine learning application for predictive Kubernetes cluster health monitori
 
 ## Project Structure
 
-📁 `/notebooks` – Code for data collection, model training, and evaluation
+📁 `/notebooks` – Code for data collection, model training,  and evaluation
 - `data_exploration.ipynb` - Exploratory analysis of Kubernetes metrics data
 - `model_training.ipynb` - Training various ML models for failure prediction
 - `model_evaluation.ipynb` - Evaluation of model performance and visualizations
