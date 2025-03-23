@@ -494,7 +494,7 @@ elif page == "Model Evaluation":
                         st.session_state.data, 
                         model
                     )
-                    st.plotly_chart(fig)
+                    st.plotly_chart(fig, key="time_series_forecast_plot")
                     
                     # Calculate time series model metrics
                     from model_evaluator import evaluate_time_series_model
@@ -571,7 +571,7 @@ elif page == "Model Evaluation":
                     title='Model Comparison',
                     labels={'index': 'Metric', 'value': 'Score', 'variable': 'Model'}
                 )
-                st.plotly_chart(fig)
+                st.plotly_chart(fig, key="model_comparison_bar_chart")
 
 # Prediction Page
 elif page == "Prediction":
@@ -908,7 +908,7 @@ elif page == "Prediction":
                                                         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
                                                     )
                                                     
-                                                    st.plotly_chart(fig)
+                                                    st.plotly_chart(fig, key="time_series_forecast_prediction")
                             
                             with tab2:
                                 # Show raw JSON data in an expandable container
@@ -956,7 +956,7 @@ elif page == "Prediction":
                                                 metrics, 
                                                 model_name=model_name.replace('_', ' ').title()
                                             )
-                                            st.plotly_chart(perf_fig)
+                                            st.plotly_chart(perf_fig, key=f"pred_perf_matrix_{model_name}")
                                         
                                         # Create a data row for the traditional table display
                                         row = {
@@ -1092,7 +1092,7 @@ elif page == "Prediction":
                                             fig.update_traces(textposition='outside')
                                             
                                             # Display the interactive Plotly chart
-                                            st.plotly_chart(fig)
+                                            st.plotly_chart(fig, key="model_metric_comparison_chart")
                                             
                                             # Add an explanation about comparing metrics
                                             with st.expander("About Metric Comparison"):
