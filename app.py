@@ -1424,7 +1424,7 @@ elif page == "Prediction":
                                             title='Predicted Failures by Model',
                                             color='Model'
                                         )
-                                        st.plotly_chart(fig)
+                                        st.plotly_chart(fig, key="predicted_failures_bar_chart")
 
                                     # Show detailed results for each model
                                     for model_name, result in results['predictions'].items():
@@ -1479,7 +1479,7 @@ elif page == "Prediction":
                                                         color=f'{model_name}_prediction',
                                                         title=f'Distribution of Predictions - {model_name.replace("_", " ").title()}'
                                                     )
-                                                    st.plotly_chart(fig)
+                                                    st.plotly_chart(fig, key=f"prediction_distribution_{model_name}")
                                             else:
                                                 # Display error message
                                                 st.error(f"Error during prediction: {result.get('error', 'Unknown error')}")
